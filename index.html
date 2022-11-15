@@ -44,12 +44,12 @@
                                 <div class="row">
                                     <div class="col-md-6 mt-3">
                                         <button class="btn btn-secondary
-                                            col-md-12"
+                                            col-md-12" id="buy"
                                             onclick="currencyConverterBuy()">Buy</button>
                                     </div>
                                     <div class="col-md-6 mt-3">
                                         <button class="btn btn-secondary
-                                            col-md-12"
+                                            col-md-12" id="sell"
                                             onclick="currencyConverterSell()">Sell</button>
                                     </div>
 
@@ -66,26 +66,19 @@
                                             data-toggle="tooltip"
                                             data-placement="left" title="Select
                                             ware you are from">
-                                            <option selected value="0"
-                                                aria-disabled="true">Pound</option>
-                                            <option value="1"
-                                                aria-disabled="true">IRR</option>
-                                            <option value="2"
-                                                aria-disabled="true">USA DOLLOR</option>
-                                            <option value="3"
-                                                aria-disabled="true">CANADA
-                                                DOLLOR </option>
-                                            <option value="4"
-                                                aria-disabled="true">EURO</option>
-                                            <option value="5"
-                                                aria-disabled="true">TETHER</option>
-                                            <option value="6"
-                                                aria-disabled="true">TURKISH
+                                            <option selected value="0">Select
+                                                Currency</option>
+                                            <option value="1">POUND</option>
+                                            <option value="2">IRR</option>
+                                            <option value="3">USA DOLLAR</option>
+                                            <option value="4">CANADA
+                                                DOLLAR</option>
+                                            <option value="5">EURO</option>
+                                            <option value="6">TETHER</option>
+                                            <option value="7">TURKISH
                                                 LIRA </option>
-                                            <option value="7"
-                                                aria-disabled="true">UAE DIRHAM</option>
-                                            <option value="8"
-                                                aria-disabled="true">CHINESE
+                                            <option value="8">UAE DIRHAM</option>
+                                            <option value="9">CHINESE
                                                 YUAN</option>
                                         </select>
                                     </div>
@@ -104,12 +97,6 @@
                                     </div>
                                     <div class="form-group d-none pt-4"
                                         id="resultTableBuy">
-                                        <!-- <input class="form-control"
-                                            placeholder="Converter Amount"
-                                            id="currencyConvertedAmount"
-                                            data-toggle="tooltip"
-                                            data-placement="left" title="Enter
-                                            Amount"> -->
                                         <table class="table table-striped">
                                             <thead>
                                                 <tr>
@@ -119,7 +106,7 @@
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td>Pound</td>
+                                                    <td>POUND</td>
                                                     <td id="buyPoundResult"></td>
                                                 </tr>
                                                 <tr>
@@ -127,11 +114,12 @@
                                                     <td id="buyIrrResult"></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>USA DOLLOR</td>
+                                                    <td>USA DOLLAR</td>
                                                     <td id="buyUsaResult"></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Canadian Dollar</td>
+                                                    <td>CANADA
+                                                        DOLLAR</td>
                                                     <td id="buyCanadianResult"></td>
                                                 </tr>
                                                 <tr>
@@ -170,26 +158,19 @@
                                             data-toggle="tooltip"
                                             data-placement="left" title="Select
                                             ware you are from">
-                                            <option selected value="0"
-                                                aria-disabled="true">Pound</option>
-                                            <option value="1"
-                                                aria-disabled="true">IRR</option>
-                                            <option value="2"
-                                                aria-disabled="true">USA DOLLOR</option>
-                                            <option value="3"
-                                                aria-disabled="true">CANADA
-                                                DOLLOR </option>
-                                            <option value="4"
-                                                aria-disabled="true">EURO</option>
-                                            <option value="5"
-                                                aria-disabled="true">TETHER</option>
-                                            <option value="6"
-                                                aria-disabled="true">TURKISH
+                                            <option selected value="0">Select
+                                                Currency</option>
+                                            <option value="GBP">POUND</option>
+                                            <option value="IRR">IRR</option>
+                                            <option value="USD">USA DOLLAR</option>
+                                            <option value="CAD">CANADA
+                                                DOLLAR</option>
+                                            <option value="EUR">EURO</option>
+                                            <option value="USDT">TETHER</option>
+                                            <option value="TRY">TURKISH
                                                 LIRA </option>
-                                            <option value="7"
-                                                aria-disabled="true">UAE DIRHAM</option>
-                                            <option value="8"
-                                                aria-disabled="true">CHINESE
+                                            <option value="AED">UAE DIRHAM</option>
+                                            <option value="CNY">CHINESE
                                                 YUAN</option>
                                         </select>
                                     </div>
@@ -208,12 +189,6 @@
                                     </div>
                                     <div class="form-group d-none pt-4"
                                         id="resultTableSell">
-                                        <!-- <input class="form-control"
-                                            placeholder="Converter Amount"
-                                            id="currencyConvertedAmount"
-                                            data-toggle="tooltip"
-                                            data-placement="left" title="Enter
-                                            Amount"> -->
                                         <table class="table table-striped">
                                             <thead>
                                                 <tr>
@@ -223,7 +198,7 @@
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td>Pound</td>
+                                                    <td>POUND</td>
                                                     <td id="sellPoundResult"></td>
                                                 </tr>
                                                 <tr>
@@ -231,11 +206,11 @@
                                                     <td id="sellirrResult"></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>USA DOLLOR</td>
+                                                    <td>USA DOLLAR</td>
                                                     <td id="sellUsaResult"></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Canadian Dollar</td>
+                                                    <td>CANADA DOLLAR</td>
                                                     <td id="sellCanadianResult"></td>
                                                 </tr>
                                                 <tr>
