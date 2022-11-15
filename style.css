@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+
+body {
+    font-family: 'Josefin Sans', sans-serif !important;
+    background-color: #f5f5f5;
+}
+#clearButton{
+    padding: 3px;
+}
+#calculateButton{
+padding: 3px;
+}
+#total{
+    font-weight: 600;
+    padding: 1.5rem 1rem;
+}
+.card {
+    border-radius: 30px;
+    padding: 20px;
+}
+
+.card-title {
+    /*color: #999999;*/
+    font-weight: bold;
+    font-size: 22px;
+    color: rgba(19,111,218,255);
+}
+
+
+label {
+    font-size: 15px;
+    color: black;
+}
+.btn.btn-secondary {
+    background-color: #00d998;
+    border-color: #00d998;
+    border-radius: 15px;
+    height: 45px;
+    font-size: large;
+}
+.form-control {
+    padding: 16px;
+    height: 40px;
+    border-radius: 0px;
+}
+.form-control::placeholder {
+   font-size: 15px;
+}
+.form-control:focus {
+    box-shadow: none;
+    border: 1px solid black;
+    
+}
+p{
+    font-size: 20px;
+    color: #00d998;
+}

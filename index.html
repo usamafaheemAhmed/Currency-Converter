@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+            integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+            crossorigin="anonymous">
+
+        <link rel="stylesheet" href="./style.css">
+
+        <title> Currency Converter</title>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row mb-4">
+                <div class="col-md-3 mt-4">
+                    <!-- rightspace -->
+                    <!-- <div class="card">
+                        <div class="card-body">
+                            <div class="form-group">
+                                <h5 class=" text-center">You Want to Buy/Sell</h5>
+                                <div class="row">
+                                    <div class="col-md-6 mt-3">
+                                        <button class="btn btn-secondary col-md-12" onclick="currencyConverter()">Buy</button>
+                                    </div>
+                                    <div class="col-md-6 mt-3">
+                                        <button class="btn btn-secondary col-md-12" onclick="currencyConverter()">Sell</button>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="col-md-6 mt-4">
+                    <div class="card mt-4">
+                        <div class="card-body">
+                            <div class="form-group">
+                                <h5 class=" text-center">You Want to Buy/Sell</h5>
+                                <div class="row">
+                                    <div class="col-md-6 mt-3">
+                                        <button class="btn btn-secondary
+                                            col-md-12"
+                                            onclick="currencyConverterBuy()">Buy</button>
+                                    </div>
+                                    <div class="col-md-6 mt-3">
+                                        <button class="btn btn-secondary
+                                            col-md-12"
+                                            onclick="currencyConverterSell()">Sell</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- buy -->
+                            <div class="row d-none" id="currencyConverterBuy">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <!-- <h1>buy</h1> -->
+                                        <label>Select Currency:</label>
+                                        <select class="custom-select"
+                                            id="currencyConverterFromBuy"
+                                            data-toggle="tooltip"
+                                            data-placement="left" title="Select
+                                            ware you are from">
+                                            <option selected value="0"
+                                                aria-disabled="true">Pound</option>
+                                            <option value="1"
+                                                aria-disabled="true">IRR</option>
+                                            <option value="2"
+                                                aria-disabled="true">USA DOLLOR</option>
+                                            <option value="3"
+                                                aria-disabled="true">CANADA
+                                                DOLLOR </option>
+                                            <option value="4"
+                                                aria-disabled="true">EURO</option>
+                                            <option value="5"
+                                                aria-disabled="true">TETHER</option>
+                                            <option value="6"
+                                                aria-disabled="true">TURKISH
+                                                LIRA </option>
+                                            <option value="7"
+                                                aria-disabled="true">UAE DIRHAM</option>
+                                            <option value="8"
+                                                aria-disabled="true">CHINESE
+                                                YUAN</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="form-control"
+                                            type="number"
+                                            placeholder="Amount"
+                                            id="currencyConverterAmountBuy"
+                                            data-toggle="tooltip"
+                                            data-placement="left" title="Enter
+                                            Amount">
+                                    </div>
+                                    <div class="form-group">
+                                        <button class="btn btn-secondary
+                                            col-md-12" onclick="convertBuy()">Convert</button>
+                                    </div>
+                                    <div class="form-group d-none pt-4"
+                                        id="resultTableBuy">
+                                        <!-- <input class="form-control"
+                                            placeholder="Converter Amount"
+                                            id="currencyConvertedAmount"
+                                            data-toggle="tooltip"
+                                            data-placement="left" title="Enter
+                                            Amount"> -->
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Currency</th>
+                                                    <th scope="col">Converted</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Pound</td>
+                                                    <td id="buyPoundResult"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>IRR</td>
+                                                    <td id="buyIrrResult"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>USA DOLLOR</td>
+                                                    <td id="buyUsaResult"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Canadian Dollar</td>
+                                                    <td id="buyCanadianResult"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>EURO</td>
+                                                    <td id="buyEuroResult"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>TETHER</td>
+                                                    <td id="buyTetherResult"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>TURKISH LIRA </td>
+                                                    <td id="buyTurkishResult"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>UAE DIRHAM</td>
+                                                    <td id="buyUaeResult"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>CHINESE YUAN</td>
+                                                    <td id="buyChineseResult"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- sell -->
+                            <div class="row d-none" id="currencyConverterSell">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <!-- <h1>sell</h1> -->
+                                        <label>Select Currency:</label>
+                                        <select class="custom-select"
+                                            id="currencyConverterFromSell"
+                                            data-toggle="tooltip"
+                                            data-placement="left" title="Select
+                                            ware you are from">
+                                            <option selected value="0"
+                                                aria-disabled="true">Pound</option>
+                                            <option value="1"
+                                                aria-disabled="true">IRR</option>
+                                            <option value="2"
+                                                aria-disabled="true">USA DOLLOR</option>
+                                            <option value="3"
+                                                aria-disabled="true">CANADA
+                                                DOLLOR </option>
+                                            <option value="4"
+                                                aria-disabled="true">EURO</option>
+                                            <option value="5"
+                                                aria-disabled="true">TETHER</option>
+                                            <option value="6"
+                                                aria-disabled="true">TURKISH
+                                                LIRA </option>
+                                            <option value="7"
+                                                aria-disabled="true">UAE DIRHAM</option>
+                                            <option value="8"
+                                                aria-disabled="true">CHINESE
+                                                YUAN</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="form-control"
+                                            type="number"
+                                            placeholder="Amount"
+                                            id="currencyConverterAmountSell"
+                                            data-toggle="tooltip"
+                                            data-placement="left" title="Enter
+                                            Amount">
+                                    </div>
+                                    <div class="form-group">
+                                        <button class="btn btn-secondary
+                                            col-md-12" onclick="convertSell()">Convert</button>
+                                    </div>
+                                    <div class="form-group d-none pt-4"
+                                        id="resultTableSell">
+                                        <!-- <input class="form-control"
+                                            placeholder="Converter Amount"
+                                            id="currencyConvertedAmount"
+                                            data-toggle="tooltip"
+                                            data-placement="left" title="Enter
+                                            Amount"> -->
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Currency</th>
+                                                    <th scope="col">Converted</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Pound</td>
+                                                    <td id="sellPoundResult"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>IRR</td>
+                                                    <td id="sellirrResult"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>USA DOLLOR</td>
+                                                    <td id="sellUsaResult"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Canadian Dollar</td>
+                                                    <td id="sellCanadianResult"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>EURO</td>
+                                                    <td id="sellEuroResult"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>TETHER</td>
+                                                    <td id="sellTetherResult"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>TURKISH LIRA </td>
+                                                    <td id="sellturkishResult"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>UAE DIRHAM</td>
+                                                    <td id="sellUaeResult"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>CHINESE YUAN</td>
+                                                    <td id="sellChineseResult"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mt-4">
+                </div>
+            </div>
+        </div>
+
+
+        <!-- <h1>Hello, world!</h1> -->
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+        <script src="./script.js"></script>
+    </body>
+</html>
