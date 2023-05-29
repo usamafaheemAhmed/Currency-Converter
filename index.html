@@ -68,17 +68,17 @@
                                             ware you are from">
                                             <option selected value="0">Select
                                                 Currency</option>
-                                            <option value="1">POUND</option>
-                                            <option value="2">IRR</option>
-                                            <option value="3">USA DOLLAR</option>
-                                            <option value="4">CANADA
+                                            <option value="GBP">POUND</option>
+                                            <option value="IRR">IRR</option>
+                                            <option value="USD">USA DOLLAR</option>
+                                            <option value="CAD">CANADA
                                                 DOLLAR</option>
-                                            <option value="5">EURO</option>
-                                            <option value="6">TETHER</option>
-                                            <option value="7">TURKISH
+                                            <option value="EUR">EURO</option>
+                                            <option value="USDT">TETHER</option>
+                                            <option value="TRY">TURKISH
                                                 LIRA </option>
-                                            <option value="8">UAE DIRHAM</option>
-                                            <option value="9">CHINESE
+                                            <option value="AED">UAE DIRHAM</option>
+                                            <option value="CNY">CHINESE
                                                 YUAN</option>
                                         </select>
                                     </div>
@@ -203,7 +203,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td>IRR</td>
-                                                    <td id="sellirrResult"></td>
+                                                    <td id="sellIrrResult"></td>
                                                 </tr>
                                                 <tr>
                                                     <td>USA DOLLAR</td>
@@ -223,7 +223,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td>TURKISH LIRA </td>
-                                                    <td id="sellturkishResult"></td>
+                                                    <td id="sellTurkishResult"></td>
                                                 </tr>
                                                 <tr>
                                                     <td>UAE DIRHAM</td>
@@ -235,6 +235,8 @@
                                                 </tr>
                                             </tbody>
                                         </table>
+                                        <button class="btn btn-secondary d-none
+                                        col-md-12" id="loading">Loading.....</button>
                                     </div>
                                 </div>
                             </div>
